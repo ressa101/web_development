@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Grid</title>
+  <style>
+
+  .h5{
+    
+  }
+    .wrapper{
+      display:grid;
+      /* grid-template-columns:1fr 1fr 1fr;*/
+      grid-template-columns:repeat(3, 1fr);
+      grid-gap:1em;
+      /* grid-auto-rows:100px; */
+      grid-auto-rows: minmax(100px, auto);
+    }
+
+    .nested{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      grid-auto-rows: 70px;
+      grid-gap:1em;
+    }
+
+    .wrapper > div{
+      background:blue;
+      padding:1em;
+      color: white;
+    }
+    .wrapper > div:nth-child(odd){
+      background:blue;
+
+    }
+
+    .nested > div{
+      border:#333 1px solid;
+      padding:1em;
+    }
+  </style>
+</head>
+<body>
+  <h5>GRIDS</h5>
+  <div class="wrapper">
+    <div>
+      CREATE
+
+    </div>
+    <div>
+     LOGIN
+          </div>
+    <div class="nested">
+      <div>ONE</div>
+      <div>TWO</div>
+      <div>THRE</div>
+      <div>FOUR</div>
+      <div>FIVE</div>
+      <div>SIX</div>
+      <div>SEVEN</div>
+      <div>EIGHT</div>
+      <div>NINE</div>
+    </div>
+    <div>
+     
+INSERT
+   
+    </div>
+    <div>
+     YOU CAN WRITE ANYTHING HERE
+    </div>
+    <div>
+      
+        DELETE
+    </div>
+    
+  </div>
+</body>
+</html>
